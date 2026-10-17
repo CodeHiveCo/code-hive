@@ -4,45 +4,91 @@
 
 @layer base {
   :root {
-    --bg-page: #111215;
-    --bg-card: #181a20;
-    --bg-card-subtle: #14151a;
-    --border-color: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(221, 241, 96, 0.4);
+    --bg-page: #050814;
+    --bg-card: #0d172e;
+    --bg-card-subtle: #081021;
+    --border-color: rgba(245, 166, 35, 0.16);
+    --border-hover: rgba(245, 166, 35, 0.65);
     --text-primary: #ffffff;
-    --text-secondary: #a1a1aa;
-    --text-muted: #71717a;
-    --watermark: rgba(255, 255, 255, 0.04);
-    --accent: #ddf160;
-    --additional: #9f8be7;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --watermark: rgba(245, 166, 35, 0.04);
+    --accent: #f5a623;
+    --additional: #d48806;
   }
 
   html.light {
-    --bg-page: #f8f6f5;
+    --bg-page: #f3f6fc;
     --bg-card: #ffffff;
-    --bg-card-subtle: #f0eeed;
-    --border-color: rgba(0, 0, 0, 0.08);
-    --border-hover: rgba(159, 139, 231, 0.5);
-    --text-primary: #121316;
-    --text-secondary: #4a4a55;
-    --text-muted: #7a7a88;
-    --watermark: rgba(0, 0, 0, 0.05);
-    --accent: #ddf160;
-    --additional: #7a63ce;
+    --bg-card-subtle: #e6ebf5;
+    --border-color: rgba(5, 8, 20, 0.1);
+    --border-hover: rgba(212, 136, 6, 0.6);
+    --text-primary: #050814;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --watermark: rgba(5, 8, 20, 0.04);
+    --accent: #d48806;
+    --additional: #081021;
   }
 
   body {
     background-color: var(--bg-page);
     color: var(--text-primary);
-    font-family: 'Funnel Sans', 'Outfit', sans-serif;
+    font-family: 'Space Grotesk', 'Outfit', sans-serif;
     overflow-x: hidden;
     transition: background-color 0.4s ease, color 0.4s ease;
   }
 
   h1, h2, h3, h4, .font-display {
-    font-family: 'Funnel Display', 'Outfit', sans-serif;
-    letter-spacing: -0.03em;
+    font-family: 'Syne', 'Space Grotesk', sans-serif;
+    letter-spacing: -0.035em;
   }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Futuristic Cyber Grid Pattern */
+.bg-cyber-grid {
+  background-image: linear-gradient(to right, rgba(245, 166, 35, 0.035) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(245, 166, 35, 0.035) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+html.light .bg-cyber-grid {
+  background-image: linear-gradient(to right, rgba(8, 16, 33, 0.035) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(8, 16, 33, 0.035) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Futuristic HUD Corner Crosshairs */
+.hud-box {
+  position: relative;
+}
+.hud-box::before {
+  content: '⌜';
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: var(--accent);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 20;
+}
+.hud-box::after {
+  content: '⌟';
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: var(--accent);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 20;
 }
 
 /* Rayo Signature Sliding Button Animation */
@@ -118,17 +164,17 @@
 
 /* Glassmorphism utility */
 .glass-panel {
-  background: rgba(24, 26, 32, 0.75);
+  background: rgba(13, 23, 46, 0.75);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(245, 166, 35, 0.16);
 }
 
 html.light .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(5, 8, 20, 0.1);
 }
 
 /* Custom Scrollbar */
@@ -139,12 +185,12 @@ html.light .glass-panel {
   background: var(--bg-page);
 }
 ::-webkit-scrollbar-thumb {
-  background: #3f3f46;
+  background: #1e293b;
   border-radius: 9999px;
 }
 html.light ::-webkit-scrollbar-thumb {
-  background: #d4d4d8;
+  background: #cbd5e1;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #ddf160;
+  background: #f5a623;
 }

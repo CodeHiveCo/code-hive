@@ -5,54 +5,71 @@ const teamPhotos = [
   {
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80',
     caption: 'Collaborative Sprint Room',
+    code: 'UNIT // 01',
   },
   {
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&auto=format&fit=crop&q=80',
     caption: 'Product Design Workshop',
+    code: 'UNIT // 02',
   },
   {
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80',
     caption: 'Architecture Review',
+    code: 'UNIT // 03',
   },
   {
     image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&auto=format&fit=crop&q=80',
     caption: 'Rapid AI Prototyping',
+    code: 'UNIT // 04',
   },
 ];
 
 export default function TeamMarquee({ onOpenContact }) {
   return (
-    <section id="culture" className="py-24 sm:py-32 overflow-hidden border-t border-black/5 dark:border-white/5 relative bg-neutral-200/30 dark:bg-[#131419]/40">
+    <section id="culture" className="py-24 sm:py-32 overflow-hidden border-t border-black/5 dark:border-[#f5a623]/10 relative bg-neutral-100/50 dark:bg-[#081021]/60">
       <div className="max-w-[1720px] mx-auto px-6 sm:px-10 lg:px-16 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
-          <span className="text-xs font-mono uppercase tracking-widest text-[#9f8be7] mb-2 block font-semibold">
-            CULTURE & ARCHITECTURE
+          <span className="text-xs font-mono uppercase tracking-widest text-[#d48806] dark:text-[#f5a623] mb-2 block font-semibold">
+            [ 05 // CULTURE_NETWORK ]
           </span>
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-neutral-900 dark:text-white tracking-tight">
-            Creative Minds. Uncompromised Code.
+            Creative Minds. <span className="text-[#d48806] dark:text-[#f5a623]">Uncompromised Code.</span>
           </h2>
         </div>
-        <p className="max-w-md text-sm text-neutral-600 dark:text-[#8e8e99]">
+        <p className="max-w-md text-sm text-neutral-600 dark:text-[#94a3b8] font-sans">
           A world-class collective of systems architects, creative developers, and product designers united by a passion for technical perfection.
         </p>
       </div>
 
+      {/* Edge Fade Masks for clean carousel aesthetic */}
+      <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-[#f6f8fd] dark:from-[#050814] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-[#f6f8fd] dark:from-[#050814] to-transparent z-10 pointer-events-none" />
+
       {/* Horizontal Scroller Carousel */}
-      <div className="flex w-max items-center animate-marquee hover:[animation-play-state:paused]">
+      <div className="flex w-max items-center">
         {[...Array(2)].map((_, loopIdx) => (
-          <div key={loopIdx} className="flex items-center gap-6 sm:gap-8 pr-6 sm:pr-8">
+          <div
+            key={loopIdx}
+            className="flex items-center gap-6 sm:gap-8 pr-6 sm:pr-8 shrink-0 animate-marquee hover:[animation-play-state:paused]"
+          >
             {/* Card 1: Typographic Statement Card */}
-            <div className="w-80 sm:w-96 h-96 sm:h-[420px] rounded-[2rem] bg-white dark:bg-gradient-to-br dark:from-[#1d1f27] dark:to-[#14151b] border border-black/10 dark:border-white/10 p-8 sm:p-10 flex flex-col justify-between flex-shrink-0 shadow-xl shadow-black/5 dark:shadow-2xl">
+            <div className="w-80 sm:w-96 h-96 sm:h-[420px] rounded-[2rem] bg-white dark:bg-gradient-to-br dark:from-[#0d172e] dark:to-[#081021] border border-black/10 dark:border-[#f5a623]/20 p-8 sm:p-10 flex flex-col justify-between flex-shrink-0 shadow-xl shadow-black/5 dark:shadow-2xl relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#f5a623]/10 rounded-full blur-2xl pointer-events-none" />
               <div>
-                <Sparkles className="w-6 h-6 text-[#9f8be7] dark:text-[#ddf160] mb-6 animate-pulse" />
+                <div className="flex items-center justify-between mb-6">
+                  <Sparkles className="w-6 h-6 text-[#d48806] dark:text-[#f5a623] animate-pulse" />
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-[#94a3b8] dark:text-[#f5a623]/70">
+                    // NODE_SYNC
+                  </span>
+                </div>
                 <h3 className="font-display text-4xl sm:text-5xl font-semibold text-neutral-900 dark:text-white leading-tight">
                   Inspiring <br />
-                  <span className="text-[#9f8be7] dark:text-[#ddf160]">ideas.</span>
+                  <span className="text-[#d48806] dark:text-[#f5a623]">ideas.</span>
                 </h3>
               </div>
               <button
                 onClick={onOpenContact}
-                className="btn-anim group inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-neutral-900 text-white dark:bg-white/10 hover:bg-[#ddf160] hover:text-[#111215] dark:hover:bg-[#ddf160] dark:hover:text-[#111215] border border-black/10 dark:border-white/10 transition-colors text-xs font-semibold w-fit"
+                className="btn-anim group/btn inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-neutral-900 text-white dark:bg-[#f5a623] dark:text-[#050814] hover:bg-[#f5a623] hover:text-[#050814] dark:hover:bg-[#ffbe3b] border border-black/10 dark:border-[#f5a623]/40 transition-colors text-xs font-semibold w-fit shadow-lg shadow-[#f5a623]/10"
               >
                 <span className="btn-caption">
                   <span className="btn-anim__block">Meet Our Team</span>
@@ -63,41 +80,53 @@ export default function TeamMarquee({ onOpenContact }) {
             </div>
 
             {/* Photo Card 1 */}
-            <div className="w-80 sm:w-96 h-96 sm:h-[420px] rounded-[2rem] overflow-hidden border border-black/10 dark:border-white/10 relative flex-shrink-0 group shadow-md">
+            <div className="w-80 sm:w-96 h-96 sm:h-[420px] rounded-[2rem] overflow-hidden border border-black/10 dark:border-white/10 dark:hover:border-[#f5a623]/40 relative flex-shrink-0 group shadow-md transition-colors">
               <img
                 src={teamPhotos[0].image}
                 alt={teamPhotos[0].caption}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050814]/90 via-[#050814]/20 to-transparent flex flex-col justify-end p-6">
+                <span className="text-[10px] font-mono tracking-widest uppercase text-[#f5a623] mb-1">
+                  {teamPhotos[0].code}
+                </span>
                 <span className="text-sm font-medium text-white">{teamPhotos[0].caption}</span>
               </div>
             </div>
 
             {/* Photo Card 2 */}
-            <div className="w-80 sm:w-96 h-96 sm:h-[420px] rounded-[2rem] overflow-hidden border border-black/10 dark:border-white/10 relative flex-shrink-0 group shadow-md">
+            <div className="w-80 sm:w-96 h-96 sm:h-[420px] rounded-[2rem] overflow-hidden border border-black/10 dark:border-white/10 dark:hover:border-[#f5a623]/40 relative flex-shrink-0 group shadow-md transition-colors">
               <img
                 src={teamPhotos[1].image}
                 alt={teamPhotos[1].caption}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050814]/90 via-[#050814]/20 to-transparent flex flex-col justify-end p-6">
+                <span className="text-[10px] font-mono tracking-widest uppercase text-[#f5a623] mb-1">
+                  {teamPhotos[1].code}
+                </span>
                 <span className="text-sm font-medium text-white">{teamPhotos[1].caption}</span>
               </div>
             </div>
 
             {/* Card 2: Typographic Statement Card */}
-            <div className="w-80 sm:w-96 h-96 sm:h-[420px] rounded-[2rem] bg-white dark:bg-gradient-to-br dark:from-[#1d1f27] dark:to-[#14151b] border border-black/10 dark:border-white/10 p-8 sm:p-10 flex flex-col justify-between flex-shrink-0 shadow-xl shadow-black/5 dark:shadow-2xl">
+            <div className="w-80 sm:w-96 h-96 sm:h-[420px] rounded-[2rem] bg-white dark:bg-gradient-to-br dark:from-[#0d172e] dark:to-[#081021] border border-black/10 dark:border-[#f5a623]/20 p-8 sm:p-10 flex flex-col justify-between flex-shrink-0 shadow-xl shadow-black/5 dark:shadow-2xl relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#f5a623]/10 rounded-full blur-2xl pointer-events-none" />
               <div>
-                <Sparkles className="w-6 h-6 text-[#9f8be7] mb-6 animate-pulse" />
+                <div className="flex items-center justify-between mb-6">
+                  <Sparkles className="w-6 h-6 text-[#d48806] dark:text-[#f5a623] animate-pulse" />
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-[#94a3b8] dark:text-[#f5a623]/70">
+                    // EXPANSION
+                  </span>
+                </div>
                 <h3 className="font-display text-4xl sm:text-5xl font-semibold text-neutral-900 dark:text-white leading-tight">
                   Creative <br />
-                  <span className="text-[#9f8be7]">minds.</span>
+                  <span className="text-[#d48806] dark:text-[#f5a623]">minds.</span>
                 </h3>
               </div>
               <button
                 onClick={onOpenContact}
-                className="btn-anim group inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-neutral-900 text-white dark:bg-white/10 hover:bg-[#9f8be7] hover:text-white dark:hover:bg-[#9f8be7] dark:hover:text-[#111215] border border-black/10 dark:border-white/10 transition-colors text-xs font-semibold w-fit"
+                className="btn-anim group/btn inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-neutral-900 text-white dark:bg-[#f5a623] dark:text-[#050814] hover:bg-[#f5a623] hover:text-[#050814] dark:hover:bg-[#ffbe3b] border border-black/10 dark:border-[#f5a623]/40 transition-colors text-xs font-semibold w-fit shadow-lg shadow-[#f5a623]/10"
               >
                 <span className="btn-caption">
                   <span className="btn-anim__block">Join The Hive</span>
@@ -108,13 +137,16 @@ export default function TeamMarquee({ onOpenContact }) {
             </div>
 
             {/* Photo Card 3 */}
-            <div className="w-80 sm:w-96 h-96 sm:h-[420px] rounded-[2rem] overflow-hidden border border-black/10 dark:border-white/10 relative flex-shrink-0 group shadow-md">
+            <div className="w-80 sm:w-96 h-96 sm:h-[420px] rounded-[2rem] overflow-hidden border border-black/10 dark:border-white/10 dark:hover:border-[#f5a623]/40 relative flex-shrink-0 group shadow-md transition-colors">
               <img
                 src={teamPhotos[2].image}
                 alt={teamPhotos[2].caption}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050814]/90 via-[#050814]/20 to-transparent flex flex-col justify-end p-6">
+                <span className="text-[10px] font-mono tracking-widest uppercase text-[#f5a623] mb-1">
+                  {teamPhotos[2].code}
+                </span>
                 <span className="text-sm font-medium text-white">{teamPhotos[2].caption}</span>
               </div>
             </div>

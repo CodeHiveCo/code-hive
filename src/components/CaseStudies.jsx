@@ -71,14 +71,14 @@ export default function CaseStudies({ onOpenContact }) {
       {/* Section Header with RevealOnScroll */}
       <RevealOnScroll animation="fade-up" className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16 sm:mb-20">
         <div className="lg:col-span-8">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#9f8be7] dark:text-[#ddf160] mb-3 block font-semibold">
-            SELECTED WORKS
+          <span className="text-xs font-mono uppercase tracking-widest text-[#f5a623] mb-3 block font-semibold">
+            [ 04 // SELECTED_WORKS ]
           </span>
-          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl font-semibold text-neutral-900 dark:text-white tracking-tight">
+          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-[#050814] dark:text-white tracking-tight">
             Case Studies
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-neutral-600 dark:text-[#a1a1aa] max-w-xl">
-            Explore a curated selection of digital products, AI architectures, and interactive flagship experiences engineered by CodeHive.
+          <p className="mt-4 text-base sm:text-lg text-[#475569] dark:text-[#94a3b8] max-w-xl">
+            Explore a curated selection of digital products, AI architectures, and interactive flagship platforms engineered by CodeHive.
           </p>
         </div>
 
@@ -88,10 +88,10 @@ export default function CaseStudies({ onOpenContact }) {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 shadow-sm ${
+              className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 shadow-sm ${
                 filter === cat
-                  ? 'bg-neutral-900 text-white dark:bg-[#ddf160] dark:text-[#111215] font-semibold scale-105'
-                  : 'bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 text-neutral-600 dark:text-[#a1a1aa] hover:text-neutral-950 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/10'
+                  ? 'bg-[#f5a623] text-[#050814] font-bold scale-105 shadow-md shadow-[#f5a623]/25'
+                  : 'bg-white dark:bg-[#0d172e] border border-black/10 dark:border-[#f5a623]/20 text-[#64748b] dark:text-[#94a3b8] hover:text-[#050814] dark:hover:text-[#f5a623] hover:border-[#f5a623]/50'
               }`}
             >
               {cat}
@@ -109,22 +109,26 @@ export default function CaseStudies({ onOpenContact }) {
             delay={idx * 100}
             className={`${proj.span}`}
           >
-            <div className="group relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#181a20] border border-black/10 dark:border-white/10 hover:border-[#ddf160] dark:hover:border-[#ddf160]/50 transition-all duration-500 shadow-xl shadow-black/5 dark:shadow-2xl flex flex-col justify-between hover:-translate-y-2 hover:shadow-2xl">
+            <div
+              data-cursor="view"
+              onClick={onOpenContact}
+              className="group/card cursor-pointer relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#0d172e] border border-black/10 dark:border-[#f5a623]/20 hover:border-[#f5a623] transition-all duration-500 shadow-xl shadow-black/5 dark:shadow-2xl flex flex-col justify-between hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#f5a623]/10"
+            >
               {/* Project Image Container */}
-              <div className="relative h-80 sm:h-[440px] w-full overflow-hidden bg-black">
+              <div className="relative h-80 sm:h-[440px] w-full overflow-hidden bg-[#050814]">
                 <img
                   src={proj.image}
                   alt={proj.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 opacity-90 group-hover:opacity-100 ease-out"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110 opacity-90 group-hover/card:opacity-100 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050814] via-transparent to-[#050814]/30" />
 
                 {/* Tag Pills floating top */}
                 <div className="absolute top-6 left-6 flex flex-wrap gap-2 z-10">
                   {proj.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-3.5 py-1 rounded-full text-xs font-semibold bg-black/70 backdrop-blur-md border border-white/15 text-white transition-transform group-hover:translate-x-0.5"
+                      className="px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-[#081021]/80 backdrop-blur-md border border-[#f5a623]/30 text-[#f5a623] transition-transform group-hover/card:translate-x-0.5"
                     >
                       {tag}
                     </span>
@@ -132,7 +136,7 @@ export default function CaseStudies({ onOpenContact }) {
                 </div>
 
                 {/* Hover Overlay Arrow Button */}
-                <div className="absolute bottom-6 right-6 z-10 w-14 h-14 rounded-full bg-[#ddf160] text-[#111215] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-400 transform translate-y-3 group-hover:translate-y-0 shadow-2xl group-hover:rotate-45">
+                <div className="absolute bottom-6 right-6 z-10 w-14 h-14 rounded-full bg-[#f5a623] text-[#050814] flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-all duration-400 transform translate-y-3 group-hover/card:translate-y-0 shadow-2xl shadow-[#f5a623]/40 group-hover/card:rotate-45">
                   <ArrowUpRight className="w-6 h-6 stroke-[2.5]" />
                 </div>
               </div>
@@ -140,13 +144,13 @@ export default function CaseStudies({ onOpenContact }) {
               {/* Project Metadata & Title */}
               <div className="p-8 sm:p-10 pt-6 flex flex-col justify-between">
                 <div>
-                  <span className="text-xs font-mono uppercase tracking-widest text-[#9f8be7] block mb-1 font-semibold">
-                    PROJECT 0{proj.id}
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#f5a623] block mb-1 font-semibold">
+                    PROJECT // 0{proj.id}
                   </span>
-                  <h3 className="font-display text-2xl sm:text-3xl font-semibold text-neutral-900 dark:text-white group-hover:text-[#9f8be7] dark:group-hover:text-[#ddf160] transition-colors mb-2">
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-[#050814] dark:text-white group-hover/card:text-[#f5a623] transition-colors mb-2">
                     {proj.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-neutral-600 dark:text-[#a1a1aa] leading-relaxed">
+                  <p className="text-sm sm:text-base text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                     {proj.subtitle}
                   </p>
                 </div>
@@ -160,20 +164,20 @@ export default function CaseStudies({ onOpenContact }) {
       <RevealOnScroll animation="scale-up" delay={200} className="mt-20 flex justify-center">
         <button
           onClick={onOpenContact}
-          className="group relative w-44 h-44 sm:w-52 sm:h-52 rounded-full flex items-center justify-center focus:outline-none cursor-pointer"
+          className="group relative w-44 h-44 sm:w-56 sm:h-56 rounded-full flex items-center justify-center focus:outline-none cursor-pointer"
           aria-label="Start new project"
         >
           {/* Orbiting Rotating Text SVG with acceleration on hover */}
           <svg
             viewBox="0 0 200 200"
-            className="w-full h-full animate-spin-slow group-hover:[animation-duration:10s] transition-all select-none pointer-events-none"
+            className="w-full h-full animate-spin-badge group-hover:[animation-duration:3.5s] transition-all select-none pointer-events-none"
           >
             <path
               id="circlePath"
               d="M 100, 100 m -72, 0 a 72,72 0 1,1 144,0 a 72,72 0 1,1 -144,0"
               fill="none"
             />
-            <text className="font-display text-[12.5px] uppercase tracking-[0.24em] fill-neutral-900 dark:fill-white/80 group-hover:fill-[#9f8be7] dark:group-hover:fill-[#ddf160] transition-colors font-medium">
+            <text className="font-mono text-[11px] uppercase tracking-[0.24em] fill-[#050814]/70 dark:fill-[#94a3b8] group-hover:fill-[#f5a623] transition-colors font-semibold">
               <textPath href="#circlePath">
                 LET'S START NEW PROJECT ✦ CODEHIVE STUDIO ✦
               </textPath>
@@ -181,8 +185,8 @@ export default function CaseStudies({ onOpenContact }) {
           </svg>
 
           {/* Central Pulsing Interactive Button */}
-          <div className="absolute w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white dark:bg-[#1e2029] group-hover:bg-[#ddf160] border border-black/10 dark:border-white/15 group-hover:border-[#ddf160] flex items-center justify-center transition-all duration-300 group-hover:scale-115 shadow-2xl">
-            <ArrowUpRight className="w-8 h-8 text-neutral-900 dark:text-[#ddf160] group-hover:text-[#111215] transition-colors stroke-[2.5] group-hover:rotate-45" />
+          <div className="absolute w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#f5a623] hover:bg-[#ffbe3b] text-[#050814] border border-[#f5a623] flex items-center justify-center transition-all duration-300 group-hover:scale-115 shadow-2xl shadow-[#f5a623]/35">
+            <ArrowUpRight className="w-8 h-8 stroke-[2.5] group-hover:rotate-45 transition-transform" />
           </div>
         </button>
       </RevealOnScroll>

@@ -13,7 +13,7 @@ const services = [
     features: ['High-conversion design systems', 'Fluid 60fps micro-animations', 'Interactive 3D prototypes', 'Design tokens & multi-brand setups'],
     image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&auto=format&fit=crop&q=80',
     icon: Palette,
-    accentColor: '#9f8be7',
+    accentColor: '#f5a623',
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const services = [
     features: ['React 19, Next.js & Vite', 'Headless CMS & Commerce integrations', 'Sub-second serverless APIs', 'Tailwind & CSS architecture'],
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80',
     icon: Code2,
-    accentColor: '#ddf160',
+    accentColor: '#f5a623',
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const services = [
     features: ['Custom typographic systems', 'Adaptive logo marks & iconography', 'Comprehensive brand rulebooks', 'Marketing collateral & decks'],
     image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=1200&auto=format&fit=crop&q=80',
     icon: Sparkles,
-    accentColor: '#ddf160',
+    accentColor: '#f5a623',
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const services = [
     features: ['Custom LLM integration & RAG', 'Technical SEO & Core Web Vitals', 'Automated CRM & outreach flows', 'Performance analytics dashboards'],
     image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&auto=format&fit=crop&q=80',
     icon: Rocket,
-    accentColor: '#9f8be7',
+    accentColor: '#f5a623',
   },
 ];
 
@@ -60,15 +60,15 @@ export default function ServicesPinned({ onOpenContact }) {
     <section id="services" className="py-24 sm:py-36 px-6 sm:px-10 lg:px-16 max-w-[1720px] mx-auto relative">
       <RevealOnScroll animation="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 sm:mb-24">
         <div>
-          <span className="text-xs font-mono uppercase tracking-widest text-[#9f8be7] dark:text-[#ddf160] mb-3 block font-semibold">
-            CORE CAPABILITIES
+          <span className="text-xs font-mono uppercase tracking-widest text-[#f5a623] mb-3 block font-semibold">
+            [ 03 // CORE_EXPERTISE ]
           </span>
-          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl font-semibold text-neutral-900 dark:text-white tracking-tight">
+          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-[#050814] dark:text-white tracking-tight">
             Services & Expertise
           </h2>
         </div>
-        <p className="max-w-md text-sm sm:text-base text-neutral-600 dark:text-[#a1a1aa] leading-relaxed">
-          Full-spectrum creative engineering: from bespoke visual identity and UI/UX design to robust cloud systems and AI agents.
+        <p className="max-w-md text-sm sm:text-base text-[#475569] dark:text-[#94a3b8] leading-relaxed font-sans">
+          Full-spectrum creative engineering: from bespoke visual identity and UI/UX systems to robust cloud infrastructure and autonomous AI agents.
         </p>
       </RevealOnScroll>
 
@@ -76,24 +76,24 @@ export default function ServicesPinned({ onOpenContact }) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 items-start">
         {/* Sticky Visual Showcase on Left */}
         <RevealOnScroll animation="fade-up" delay={100} className="lg:col-span-5 xl:col-span-5 lg:sticky lg:top-28">
-          <div className="relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#181a20] border border-black/10 dark:border-white/10 p-4 sm:p-6 shadow-2xl shadow-black/5 dark:shadow-black/50 group transition-all duration-500">
+          <div className="relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#0d172e] border border-black/10 dark:border-[#f5a623]/25 p-4 sm:p-6 shadow-2xl shadow-black/5 dark:shadow-black/60 group transition-all duration-500">
             {/* Visual Preview Image */}
-            <div className="relative h-72 sm:h-96 w-full rounded-2xl overflow-hidden mb-6 bg-black">
+            <div className="relative h-72 sm:h-96 w-full rounded-2xl overflow-hidden mb-6 bg-[#050814]">
               <img
                 src={activeService.image}
                 alt={activeService.title}
                 key={activeService.id}
                 className="w-full h-full object-cover transition-all duration-700 animate-fadeIn group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050814] via-transparent to-[#050814]/40" />
               
               {/* Floating Pill on image */}
-              <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-white/15 text-xs font-mono text-[#ddf160]">
-                0{activeService.id} / 04
+              <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-[#081021]/80 backdrop-blur-md border border-[#f5a623]/30 text-xs font-mono text-[#f5a623]">
+                INDEX // 0{activeService.id} OF 04
               </div>
 
               <div className="absolute bottom-4 left-4 right-4 text-white">
-                <p className="text-xs font-mono text-[#9f8be7] uppercase tracking-wider mb-1">
+                <p className="text-xs font-mono text-[#f5a623] uppercase tracking-wider mb-1 font-semibold">
                   {activeService.subtitle}
                 </p>
                 <h3 className="font-display text-xl sm:text-2xl font-bold text-white">
@@ -104,22 +104,22 @@ export default function ServicesPinned({ onOpenContact }) {
 
             {/* Feature Checkpoints */}
             <div className="space-y-3 px-2">
-              <p className="text-xs font-mono uppercase tracking-widest text-neutral-500 dark:text-[#8e8e99] mb-3">
-                Key Deliverables
+              <p className="text-xs font-mono uppercase tracking-widest text-[#64748b] dark:text-[#94a3b8] mb-3 font-semibold">
+                SYSTEM DELIVERABLES
               </p>
               {activeService.features.map((feat, idx) => (
-                <div key={idx} className="flex items-center gap-3 text-sm text-neutral-800 dark:text-[#d4d4d8] font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[#9f8be7] dark:text-[#ddf160] flex-shrink-0" />
+                <div key={idx} className="flex items-center gap-3 text-sm text-[#050814] dark:text-[#f8fafc] font-medium">
+                  <CheckCircle2 className="w-4 h-4 text-[#f5a623] flex-shrink-0" />
                   <span>{feat}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 pt-6 border-t border-black/5 dark:border-white/5 flex items-center justify-between">
-              <span className="text-xs text-neutral-500 dark:text-[#8e8e99]">Ready to discuss scope?</span>
+            <div className="mt-8 pt-6 border-t border-black/10 dark:border-[#f5a623]/15 flex items-center justify-between">
+              <span className="text-xs font-mono text-[#64748b] dark:text-[#94a3b8]">SPEC // INQUIRY</span>
               <button
                 onClick={onOpenContact}
-                className="btn-anim group/sbtn inline-flex items-center gap-2 px-5 py-2 rounded-full bg-neutral-900 text-white dark:bg-[#ddf160] dark:text-[#111215] font-semibold text-xs hover:bg-[#ddf160] hover:text-[#111215] dark:hover:bg-[#c8df46] transition-colors"
+                className="btn-anim group/sbtn inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f5a623] hover:bg-[#ffbe3b] text-[#050814] font-bold font-mono text-xs uppercase tracking-wider transition-colors shadow-md shadow-[#f5a623]/20"
               >
                 <span className="btn-caption">
                   <span className="btn-anim__block">Inquire Service</span>
@@ -147,8 +147,8 @@ export default function ServicesPinned({ onOpenContact }) {
                   onClick={() => setActiveService(srv)}
                   className={`cursor-pointer p-8 sm:p-10 rounded-[2rem] transition-all duration-400 border ${
                     isSelected
-                      ? 'bg-white dark:bg-[#181a20] border-[#ddf160] shadow-xl shadow-black/5 dark:shadow-black/50 translate-x-3 scale-[1.01]'
-                      : 'bg-white/70 dark:bg-[#14151a]/60 border-black/5 dark:border-white/5 hover:border-black/15 dark:hover:border-white/15 hover:bg-white dark:hover:bg-[#181a20]/40 hover:translate-x-1'
+                      ? 'bg-white dark:bg-[#0d172e] border-[#f5a623] shadow-xl shadow-black/5 dark:shadow-[#f5a623]/10 translate-x-3 scale-[1.01]'
+                      : 'bg-white/80 dark:bg-[#081021]/60 border-black/10 dark:border-[#f5a623]/15 hover:border-[#f5a623]/50 hover:bg-white dark:hover:bg-[#0d172e]/50 hover:translate-x-1'
                   }`}
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
@@ -156,15 +156,15 @@ export default function ServicesPinned({ onOpenContact }) {
                       <div
                         className={`w-12 h-12 rounded-2xl flex items-center justify-center border transition-all duration-300 ${
                           isSelected
-                            ? 'bg-[#ddf160] text-neutral-950 dark:bg-[#ddf160]/10 dark:border-[#ddf160]/30 dark:text-[#ddf160] rotate-6 scale-110 shadow-lg'
-                            : 'bg-neutral-100 dark:bg-white/5 border-black/10 dark:border-white/10 text-neutral-600 dark:text-[#8e8e99]'
+                            ? 'bg-[#f5a623] text-[#050814] dark:bg-[#f5a623]/20 dark:border-[#f5a623] dark:text-[#f5a623] rotate-6 scale-110 shadow-lg'
+                            : 'bg-neutral-100 dark:bg-[#111f3d] border-black/10 dark:border-[#f5a623]/20 text-neutral-600 dark:text-[#94a3b8]'
                         }`}
                       >
                         <Icon className="w-6 h-6" />
                       </div>
                       <div>
-                        <span className="text-xs font-mono text-neutral-400 dark:text-[#8e8e99]">0{srv.id}</span>
-                        <h3 className="font-display text-2xl sm:text-3xl font-semibold text-neutral-900 dark:text-white tracking-tight">
+                        <span className="text-xs font-mono text-[#f5a623]">0{srv.id} // SYS</span>
+                        <h3 className="font-display text-2xl sm:text-3xl font-bold text-[#050814] dark:text-white tracking-tight">
                           {srv.title}
                         </h3>
                       </div>
@@ -172,8 +172,8 @@ export default function ServicesPinned({ onOpenContact }) {
                     <div
                       className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all ${
                         isSelected
-                          ? 'bg-neutral-900 dark:bg-[#ddf160] border-neutral-900 dark:border-[#ddf160] text-white dark:text-[#111215] rotate-45 scale-110'
-                          : 'border-black/10 dark:border-white/10 text-neutral-400 dark:text-[#8e8e99]'
+                          ? 'bg-[#f5a623] border-[#f5a623] text-[#050814] rotate-45 scale-110'
+                          : 'border-black/10 dark:border-[#f5a623]/20 text-neutral-400 dark:text-[#94a3b8]'
                       }`}
                     >
                       <ArrowUpRight className="w-4 h-4" />
@@ -185,14 +185,14 @@ export default function ServicesPinned({ onOpenContact }) {
                     {srv.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="px-3 py-1 rounded-full text-xs font-medium bg-neutral-100 dark:bg-white/5 border border-black/5 dark:border-white/10 text-neutral-700 dark:text-[#a1a1aa]"
+                        className="px-3 py-1 rounded-full text-xs font-mono font-medium bg-[#f5a623]/10 border border-[#f5a623]/20 text-[#f5a623]"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <p className="text-sm sm:text-base text-neutral-600 dark:text-[#a1a1aa] leading-relaxed">
+                  <p className="text-sm sm:text-base text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                     {srv.description}
                   </p>
                 </div>

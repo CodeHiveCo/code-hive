@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ArrowUpRight, ShieldCheck, Zap, Award, Sparkles } from 'lucide-react';
 import RevealOnScroll from './RevealOnScroll';
 
-function CounterItem({ endValue, prefix = '', suffix = '', duration = 2000 }) {
+function CounterItem({ endValue, prefix = '', suffix = '', duration = 1600 }) {
   const [count, setCount] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
   const ref = useRef(null);
@@ -14,7 +14,7 @@ function CounterItem({ endValue, prefix = '', suffix = '', duration = 2000 }) {
           setHasStarted(true);
         }
       },
-      { threshold: 0.25 }
+      { threshold: 0.1, rootMargin: '0px 0px -20px 0px' }
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -24,32 +24,32 @@ function CounterItem({ endValue, prefix = '', suffix = '', duration = 2000 }) {
   useEffect(() => {
     if (!hasStarted) return;
 
-    let start = 0;
     const target = parseFloat(endValue);
-    const stepTime = 25;
-    const totalSteps = duration / stepTime;
-    const increment = target / totalSteps;
+    const startTime = performance.now();
 
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(timer);
+    const updateCounter = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic: 1 - pow(1 - progress, 3)
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const current = target * easeProgress;
+
+      setCount(current);
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
       } else {
-        setCount(start);
+        setCount(target);
       }
-    }, stepTime);
+    };
 
-    return () => clearInterval(timer);
+    requestAnimationFrame(updateCounter);
   }, [hasStarted, endValue, duration]);
 
-  const formatted =
-    endValue.includes('.')
-      ? count.toFixed(1)
-      : Math.floor(count);
+  const formatted = endValue.includes('.') ? count.toFixed(1) : Math.floor(count);
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className="tabular-nums">
       {prefix}
       {hasStarted ? formatted : '0'}
       {suffix}
@@ -68,25 +68,51 @@ export default function Manifesto({ onOpenContact }) {
   return (
     <section id="about" className="py-24 sm:py-36 px-6 sm:px-10 lg:px-16 max-w-[1720px] mx-auto relative">
       {/* Visual Divider / Ambient Accent Bar */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-black/10 dark:via-white/15 to-transparent mb-20" />
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#f5a623]/20 to-transparent mb-20" />
 
       {/* Manifesto Headline & Statement with RevealOnScroll */}
       <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
         <RevealOnScroll animation="scale-up">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#ddf160]/20 dark:bg-[#ddf160]/10 border border-[#ddf160]/30 text-xs font-semibold text-neutral-900 dark:text-[#ddf160] mb-8 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#9f8be7] dark:text-[#ddf160] animate-spin-slow" /> OUR MANIFESTO
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f5a623]/15 border border-[#f5a623]/30 text-xs font-mono font-semibold text-[#050814] dark:text-[#f5a623] mb-8 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#f5a623] animate-spin-slow" /> [ 02 // MANIFESTO_FRAMEWORK ]
           </div>
         </RevealOnScroll>
 
         <RevealOnScroll animation="fade-up" delay={150}>
-          <p className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.25] text-neutral-900 dark:text-white tracking-tight mb-12 transition-colors">
+          <p className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.25] text-[#050814] dark:text-white tracking-tight mb-12 transition-colors">
             We are a creative web & software agency specializing in{' '}
-            <span className="text-[#9f8be7] dark:text-[#ddf160] font-medium underline decoration-[#ddf160]/50 decoration-wavy transition-colors">
+            <span className="relative inline-block text-[#f5a623] font-medium group">
               innovative design
+              <svg
+                viewBox="0 0 240 18"
+                className="absolute left-0 -bottom-2 w-full h-3 text-[#f5a623] overflow-visible pointer-events-none opacity-90"
+                fill="none"
+              >
+                <path
+                  d="M2 9 C 20 2, 40 16, 60 9 C 80 2, 100 16, 120 9 C 140 2, 160 16, 180 9 C 200 2, 220 16, 238 9"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  className="animate-pulse"
+                />
+              </svg>
             </span>{' '}
             and{' '}
-            <span className="text-[#7a63ce] dark:text-[#9f8be7] font-medium transition-colors">
+            <span className="relative inline-block text-[#ffbe3b] font-medium group">
               cutting-edge development
+              <svg
+                viewBox="0 0 320 18"
+                className="absolute left-0 -bottom-2 w-full h-3 text-[#f5a623]/80 overflow-visible pointer-events-none opacity-80"
+                fill="none"
+              >
+                <path
+                  d="M2 9 C 30 2, 60 16, 90 9 C 120 2, 150 16, 180 9 C 210 2, 240 16, 270 9 C 295 2, 310 16, 318 9"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  className="animate-pulse"
+                />
+              </svg>
             </span>
             . We help businesses stand out and every aspect of our projects is crafted with the highest standards of quality.
           </p>
@@ -95,18 +121,18 @@ export default function Manifesto({ onOpenContact }) {
         <RevealOnScroll animation="fade-up" delay={300} className="flex flex-wrap items-center justify-center gap-5">
           <a
             href="#services"
-            className="btn-anim group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-white dark:bg-[#181a20] hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-[#111215] text-neutral-900 dark:text-white border border-black/10 dark:border-white/15 transition-all duration-300 font-medium text-sm shadow-lg shadow-black/5 dark:shadow-xl hover:scale-105"
+            className="btn-anim group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-white dark:bg-[#0d172e] hover:bg-[#081021] hover:text-[#f5a623] text-[#050814] dark:text-white border border-black/10 dark:border-[#f5a623]/30 hover:border-[#f5a623] transition-all duration-300 font-mono text-xs font-semibold uppercase tracking-wider shadow-lg shadow-black/5 dark:shadow-xl hover:scale-105"
           >
             <span className="btn-caption">
-              <span className="btn-anim__block">Discover Our Services</span>
-              <span className="btn-anim__block font-semibold">Discover Our Services</span>
+              <span className="btn-anim__block">Discover Services</span>
+              <span className="btn-anim__block text-[#f5a623]">Discover Services</span>
             </span>
-            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-[#f5a623]" />
           </a>
 
           <button
             onClick={onOpenContact}
-            className="btn-anim group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#ddf160] hover:bg-[#c8df46] text-[#111215] transition-all duration-300 font-semibold text-sm shadow-xl shadow-[#ddf160]/25 hover:shadow-2xl hover:scale-105"
+            className="btn-anim group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#f5a623] hover:bg-[#ffbe3b] text-[#050814] transition-all duration-300 font-mono text-xs font-bold uppercase tracking-wider shadow-xl shadow-[#f5a623]/25 hover:shadow-2xl hover:scale-105 border border-[#f5a623]"
           >
             <span className="btn-caption">
               <span className="btn-anim__block">Start Collaboration</span>
@@ -118,7 +144,7 @@ export default function Manifesto({ onOpenContact }) {
       </div>
 
       {/* Stats Cards Grid with dynamic counter animation */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-20 pt-16 border-t border-black/5 dark:border-white/5">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-20 pt-16 border-t border-black/5 dark:border-[#f5a623]/15">
         {stats.map((stat, idx) => {
           const Icon = stat.icon;
           return (
@@ -126,17 +152,20 @@ export default function Manifesto({ onOpenContact }) {
               key={idx}
               animation="fade-up"
               delay={idx * 120}
-              className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#181a20]/60 border border-black/10 dark:border-white/5 hover:border-[#ddf160] dark:hover:border-[#ddf160]/40 transition-all duration-500 group hover:-translate-y-2 shadow-md shadow-black/5 dark:shadow-none hover:shadow-2xl"
+              className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#0d172e] border border-black/10 dark:border-[#f5a623]/20 hover:border-[#f5a623] transition-all duration-500 group hover:-translate-y-2 shadow-md shadow-black/5 dark:shadow-none hover:shadow-2xl hover:shadow-[#f5a623]/10"
             >
-              <Icon className="w-6 h-6 text-neutral-400 dark:text-[#8e8e99] group-hover:text-[#9f8be7] dark:group-hover:text-[#ddf160] transition-colors mb-4 group-hover:rotate-12 group-hover:scale-115 duration-300" />
-              <div className="font-display text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white tracking-tight mb-2 group-hover:translate-x-1 transition-transform">
+              <div className="flex items-center justify-between mb-4">
+                <Icon className="w-6 h-6 text-[#f5a623] group-hover:scale-115 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="font-mono text-[10px] text-[#64748b] dark:text-[#94a3b8]">0{idx + 1}</span>
+              </div>
+              <div className="font-display text-4xl sm:text-5xl font-bold text-[#050814] dark:text-white tracking-tight mb-2 group-hover:text-[#f5a623] transition-colors">
                 <CounterItem
                   endValue={stat.value}
                   prefix={stat.prefix || ''}
                   suffix={stat.suffix || ''}
                 />
               </div>
-              <div className="text-xs sm:text-sm text-neutral-600 dark:text-[#8e8e99] font-medium">
+              <div className="font-mono text-xs text-[#64748b] dark:text-[#94a3b8] uppercase tracking-wider font-medium">
                 {stat.label}
               </div>
             </RevealOnScroll>

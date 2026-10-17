@@ -52,7 +52,17 @@ function App() {
   const handleCloseContact = () => setIsContactOpen(false);
 
   return (
-    <div className="min-h-screen transition-colors duration-500 bg-[#f8f6f5] dark:bg-[#111215] text-[#121316] dark:text-[#f4f4f5]">
+    <div className="relative min-h-screen transition-colors duration-500 bg-[#f3f6fc] dark:bg-[#050814] text-[#050814] dark:text-[#f8fafc] overflow-x-hidden selection:bg-[#f5a623] selection:text-[#050814] bg-cyber-grid">
+      {/* Interactive Cursor Follower & Ambient Spotlight */}
+      <CursorGlow />
+
+      {/* Living Ambient Aurora Floating Gradients (Cyber Dark Blue & Dark Yellow) */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 opacity-70 dark:opacity-35">
+        <div className="absolute -top-[10%] -left-[10%] w-[600px] sm:w-[850px] h-[600px] sm:h-[850px] rounded-full bg-gradient-to-tr from-[#f5a623]/12 to-[#0d172e]/80 blur-[140px] animate-aurora-1" />
+        <div className="absolute top-[45%] -right-[15%] w-[500px] sm:w-[750px] h-[500px] sm:h-[750px] rounded-full bg-gradient-to-bl from-[#081021] to-[#f5a623]/15 blur-[150px] animate-aurora-2" />
+        <div className="absolute -bottom-[10%] left-[20%] w-[550px] sm:w-[800px] h-[550px] sm:h-[800px] rounded-full bg-gradient-to-r from-[#f5a623]/10 to-[#101f3d] blur-[160px] animate-aurora-1" />
+      </div>
+
       {/* Navigation Header */}
       <Header
         isDarkMode={isDarkMode}
