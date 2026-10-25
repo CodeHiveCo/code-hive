@@ -5,56 +5,56 @@ import RevealOnScroll from './RevealOnScroll';
 const projects = [
   {
     id: 1,
-    title: 'NeuroFlow AI',
-    subtitle: 'Autonomous agent workspace & intelligence dashboard',
-    tags: ['AI & LLMs', 'Next.js 15', 'Neural Canvas'],
-    category: 'AI & Cloud',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&auto=format&fit=crop&q=80',
+    title: 'Pulse Commerce & Monetization',
+    subtitle: 'High-conversion web architecture with optimized ad yield and sub-second load times',
+    tags: ['Web Development', 'Monetization', 'SEO'],
+    category: 'Web Development',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
   {
     id: 2,
-    title: 'Hyperion Pay',
-    subtitle: 'Borderless financial treasury & high-throughput checkout',
-    tags: ['FinTech', 'Architecture', 'Security'],
-    category: 'FinTech',
+    title: 'FinEdge Treasury Portal',
+    subtitle: 'Modern corporate website redesign & custom financial dashboard system',
+    tags: ['Redesign', 'Corporate', 'Optimization'],
+    category: 'Custom Solutions',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
   {
     id: 3,
-    title: 'Lumina Spatial',
-    subtitle: 'Interactive 3D WebGL brand universe and digital gallery',
-    tags: ['3D WebGL', 'Motion', 'Spatial UI'],
-    category: '3D / WebGL',
-    image: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1200&auto=format&fit=crop&q=80',
+    title: 'Nexus Spatial UI System',
+    subtitle: 'Intuitive spatial design system, wireframing, and interactive prototype suite',
+    tags: ['UI/UX Design', 'Design Systems', 'Prototypes'],
+    category: 'UI/UX Design',
+    image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
   {
     id: 4,
-    title: 'Vektor Clinical',
-    subtitle: 'Real-time diagnostic intelligence & clinical data pipeline',
-    tags: ['HealthTech', 'React Native', 'Data Viz'],
-    category: 'AI & Cloud',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&auto=format&fit=crop&q=80',
+    title: 'AdSense Multi-Niche Media Hub',
+    subtitle: 'High-RPM publishing platform engineered for organic discoverability and compliance',
+    tags: ['Google AdSense', 'Monetization', 'Publishing'],
+    category: 'Digital Products',
+    image: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
   {
     id: 5,
-    title: 'Apex Protocol',
-    subtitle: 'Decentralized liquidity engine with sub-millisecond execution',
-    tags: ['Web3', 'WebSockets', 'Trading UI'],
-    category: 'FinTech',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&auto=format&fit=crop&q=80',
+    title: 'Aura Social Brand Engine',
+    subtitle: 'Multi-channel social presence, creative direction, and audience engagement pipeline',
+    tags: ['Social Media', 'Content Strategy', 'Growth'],
+    category: 'Digital Products',
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
   {
     id: 6,
-    title: 'Aura Luxury',
-    subtitle: 'Headless global flagship storefront with sub-second page transitions',
-    tags: ['E-Commerce', 'Shopify Plus', 'Custom Tokenization'],
-    category: 'E-Commerce',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&auto=format&fit=crop&q=80',
+    title: 'Enterprise Process Automation',
+    subtitle: 'Custom internal tools, workflow simplification, and practical cloud integrations',
+    tags: ['Custom Solutions', 'Automation', 'Efficiency'],
+    category: 'Custom Solutions',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
 ];
@@ -75,20 +75,20 @@ export default function CaseStudies({ onOpenContact }) {
             [ 04 // SELECTED_WORKS ]
           </span>
           <h2 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-[#050814] dark:text-white tracking-tight">
-            Case Studies
+            Selected Works
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#475569] dark:text-[#94a3b8] max-w-xl">
-            Explore a curated selection of digital products, AI architectures, and interactive flagship platforms engineered by CodeHive.
+            Turning bold ideas into functional, scalable, and impactful digital products across web development, UI/UX, and monetization.
           </p>
         </div>
 
         {/* Filter Pills with smooth active states */}
         <div className="lg:col-span-4 flex flex-wrap lg:justify-end gap-2">
-          {['All', 'AI & Cloud', 'FinTech', 'E-Commerce', '3D / WebGL'].map((cat) => (
+          {['All', 'Web Development', 'UI/UX Design', 'Digital Products', 'Custom Solutions'].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 shadow-sm ${
+              className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-300 shadow-sm cursor-pointer ${
                 filter === cat
                   ? 'bg-[#f5a623] text-[#050814] font-bold scale-105 shadow-md shadow-[#f5a623]/25'
                   : 'bg-white dark:bg-[#0d172e] border border-black/10 dark:border-[#f5a623]/20 text-[#64748b] dark:text-[#94a3b8] hover:text-[#050814] dark:hover:text-[#f5a623] hover:border-[#f5a623]/50'
@@ -179,7 +179,7 @@ export default function CaseStudies({ onOpenContact }) {
             />
             <text className="font-mono text-[11px] uppercase tracking-[0.24em] fill-[#050814]/70 dark:fill-[#94a3b8] group-hover:fill-[#f5a623] transition-colors font-semibold">
               <textPath href="#circlePath">
-                LET'S START NEW PROJECT ✦ CODEHIVE STUDIO ✦
+                LET'S START NEW PROJECT ✦ HiveMind STUDIO ✦
               </textPath>
             </text>
           </svg>

@@ -55,7 +55,7 @@ export default function ContactModal({ isOpen, onClose }) {
               <Sparkles className="w-3.5 h-3.5 text-[#d48806] dark:text-[#f5a623]" /> [ SYS // INITIATE_COMMS ]
             </div>
             <h3 className="font-display text-3xl sm:text-4xl font-semibold text-neutral-900 dark:text-white tracking-tight mb-2">
-              Say Hello to CodeHive<span className="text-[#d48806] dark:text-[#f5a623]">.</span>
+              Say Hello to HiveMind<span className="text-[#d48806] dark:text-[#f5a623]">.</span>
             </h3>
             <p className="text-sm text-neutral-600 dark:text-[#94a3b8] mb-8 font-sans">
               Tell us about your timeline, technical goals, and product aspirations.
@@ -101,10 +101,14 @@ export default function ContactModal({ isOpen, onClose }) {
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="w-full bg-neutral-100 dark:bg-[#050814] border border-black/10 dark:border-[#f5a623]/25 rounded-2xl px-4 py-3 text-sm text-neutral-900 dark:text-white focus:outline-none focus:border-[#f5a623] transition-colors"
                   >
-                    <option>Full-Stack Web Architecture</option>
-                    <option>Autonomous AI & LLM Workflows</option>
-                    <option>UI/UX & Brand Design System</option>
-                    <option>Mobile / Cross-Platform Product</option>
+                    <option>01. Web Development</option>
+                    <option>02. UI/UX Design</option>
+                    <option>03. Digital Product Development</option>
+                    <option>04. Website Redesign & Optimization</option>
+                    <option>05. Google AdSense & Website Monetization</option>
+                    <option>06. Social Media Management</option>
+                    <option>07. Custom Digital Solutions</option>
+                    <option>08. Digital Strategy & Consulting</option>
                   </select>
                 </div>
                 <div>
@@ -116,10 +120,10 @@ export default function ContactModal({ isOpen, onClose }) {
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                     className="w-full bg-neutral-100 dark:bg-[#050814] border border-black/10 dark:border-[#f5a623]/25 rounded-2xl px-4 py-3 text-sm text-neutral-900 dark:text-white focus:outline-none focus:border-[#f5a623] transition-colors"
                   >
-                    <option>$10k - $25k</option>
-                    <option>$25k - $50k</option>
-                    <option>$50k - $100k</option>
-                    <option>$100k+</option>
+                    <option>Standard Project</option>
+                    <option>Growth Tier</option>
+                    <option>Enterprise Architecture</option>
+                    <option>Flexible / To Discuss</option>
                   </select>
                 </div>
               </div>
@@ -140,11 +144,16 @@ export default function ContactModal({ isOpen, onClose }) {
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-full bg-neutral-900 text-white dark:bg-[#f5a623] dark:text-[#050814] hover:bg-[#f5a623] hover:text-[#050814] dark:hover:bg-[#ffbe3b] font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-xl shadow-black/10 dark:shadow-[#f5a623]/20"
+                className="w-full py-4 rounded-full bg-neutral-900 text-white dark:bg-[#f5a623] dark:text-[#050814] hover:bg-[#f5a623] hover:text-[#050814] dark:hover:bg-[#ffbe3b] font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-xl shadow-black/10 dark:shadow-[#f5a623]/20 cursor-pointer"
               >
                 <span>Transmit Inquiry</span>
                 <Send className="w-4 h-4" />
               </button>
+
+              <div className="pt-3 flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-neutral-500 dark:text-[#94a3b8] border-t border-black/5 dark:border-white/5">
+                <span>Direct: <a href="tel:09130435885" className="text-[#f5a623] hover:underline font-semibold">09130435885</a></span>
+                <span>Email: <a href="mailto:support.HiveMind@gmail.com" className="text-[#f5a623] hover:underline font-semibold">support.HiveMind@gmail.com</a></span>
+              </div>
             </form>
           </div>
         )}

@@ -16,7 +16,7 @@ import './App.css';
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('codehive-theme');
+      const savedTheme = localStorage.getItem('HiveMind-theme');
       if (savedTheme) {
         return savedTheme === 'dark';
       }
@@ -34,13 +34,13 @@ function App() {
       root.classList.remove('light');
       root.setAttribute('data-theme', 'dark');
       root.style.colorScheme = 'dark';
-      localStorage.setItem('codehive-theme', 'dark');
+      localStorage.setItem('HiveMind-theme', 'dark');
     } else {
       root.classList.remove('dark');
       root.classList.add('light');
       root.setAttribute('data-theme', 'light');
       root.style.colorScheme = 'light';
-      localStorage.setItem('codehive-theme', 'light');
+      localStorage.setItem('HiveMind-theme', 'light');
     }
   }, [isDarkMode]);
 

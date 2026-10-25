@@ -33,8 +33,6 @@ export default function RevealOnScroll({
   }, []);
 
   const getAnimationStyles = () => {
-    const baseTransition = `transition: all 0.85s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms;`;
-
     if (!isVisible) {
       switch (animation) {
         case 'fade-up':
@@ -58,7 +56,7 @@ export default function RevealOnScroll({
     <div
       ref={domRef}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-all duration-700 ease-out will-change-transform ${getAnimationStyles()} ${className}`}
+      className={`transition-all duration-700 ease-out ${getAnimationStyles()} ${className}`}
     >
       {children}
     </div>

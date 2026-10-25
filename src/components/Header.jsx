@@ -28,7 +28,7 @@ export default function Header({ isDarkMode, onToggleTheme, onOpenContact }) {
             <div className="relative w-11 h-11 rounded-2xl overflow-hidden bg-[#070b19] border border-black/10 dark:border-[#f5a623]/30 flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:border-[#f5a623] shadow-md dark:shadow-lg dark:shadow-[#050814]">
               <img
                 src="/code-hive.jpeg"
-                alt="CodeHive Official Logo"
+                alt="HiveMind Official Logo"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-[#f5a623] animate-ping" />
@@ -36,7 +36,7 @@ export default function Header({ isDarkMode, onToggleTheme, onOpenContact }) {
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-display text-xl font-bold tracking-tight text-[#050814] dark:text-white flex items-center gap-1 transition-colors">
-                codehive<span className="text-[#f5a623]">.</span>
+                HiveMind<span className="text-[#f5a623]">.</span>
               </span>
               <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-[#64748b] dark:text-[#94a3b8] font-semibold">
                 SYSTEMS // STUDIO
@@ -71,6 +71,7 @@ export default function Header({ isDarkMode, onToggleTheme, onOpenContact }) {
             {/* Theme Toggle Button */}
             <button
               type="button"
+              id="theme-toggle-btn"
               onClick={onToggleTheme}
               aria-label="Toggle Theme"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-white dark:bg-[#0d172e] hover:bg-neutral-100 dark:hover:bg-[#122040] border border-black/10 dark:border-[#f5a623]/30 text-neutral-800 dark:text-[#f5a623] hover:text-[#f5a623] transition-all duration-300 hover:rotate-45 shadow-sm cursor-pointer"
@@ -161,8 +162,8 @@ export default function Header({ isDarkMode, onToggleTheme, onOpenContact }) {
           </div>
 
           <div className="max-w-md mx-auto w-full pt-6 border-t border-black/10 dark:border-[#f5a623]/20 flex items-center justify-between text-xs font-mono text-[#64748b] dark:text-[#94a3b8]">
-            <p>CodeHive © 2026. All rights reserved.</p>
-            <p className="text-[#050814] dark:text-[#f5a623] font-medium">hello@codehive.studio</p>
+            <p>HiveMind © 2026. All rights reserved.</p>
+            <p className="text-[#050814] dark:text-[#f5a623] font-medium">support.HiveMind@gmail.com</p>
           </div>
         </div>
       )}

@@ -25,10 +25,19 @@ export default function CursorGlow() {
 
       if (!isVisible) setIsVisible(true);
 
-      // Check if hovering interactive element
+      // Check if hovering interactive element safely
       const target = e.target;
-      const interactiveEl = target.closest('a, button, [role="button"], input, textarea, .btn-anim, .cursor-pointer');
-      const projectCard = target.closest('[data-cursor="view"], .group/card, article');
+      let interactiveEl = null;
+      let projectCard = null;
+
+      try {
+        if (target && typeof target.closest === 'function') {
+          interactiveEl = target.closest('a, button, [role="button"], input, textarea, .btn-anim, .cursor-pointer');
+          projectCard = target.closest('[data-cursor="view"], [class*="group/card"], article');
+        }
+      } catch (err) {
+        // Fallback safely if DOM query fails
+      }
 
       if (interactiveEl) {
         setIsHovering(true);

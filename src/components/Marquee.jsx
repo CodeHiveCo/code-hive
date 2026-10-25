@@ -1,14 +1,14 @@
 import React from 'react';
 
 const primaryItems = [
-  '01 // DESIGN SYSTEMS',
-  '02 // FULL-STACK ARCHITECTURE',
-  '03 // GENERATIVE AI',
-  '04 // WEB APPLICATIONS',
-  '05 // CLOUD INFRASTRUCTURE',
-  '06 // AGENTIC PIPELINES',
-  '07 // BRAND SYSTEMS',
-  '08 // SUB-SECOND LATENCY',
+  '// DESIGN SYSTEMS',
+  '// FULL-STACK ARCHITECTURE',
+  '// GENERATIVE AI',
+  '// WEB APPLICATIONS',
+  '// CLOUD INFRASTRUCTURE',
+  '// AGENTIC PIPELINES',
+  '// BRAND SYSTEMS',
+  '// SUB-SECOND LATENCY',
 ];
 
 export default function Marquee({ text = null, reverse = false }) {
@@ -20,12 +20,12 @@ export default function Marquee({ text = null, reverse = false }) {
       <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-[#f3f6fc] dark:from-[#050814] to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-[#f3f6fc] dark:from-[#050814] to-transparent z-10 pointer-events-none" />
 
-      <div className="flex w-max items-center">
+      <div className="flex w-max items-center marquee-track-container group/ticker">
         {/* Animated Track Container */}
         <div
           className={`flex items-center shrink-0 ${
             reverse ? 'animate-marquee-reverse' : 'animate-marquee'
-          } hover:[animation-play-state:paused]`}
+          } group-hover/ticker:[animation-play-state:paused]`}
         >
           {items.map((item, idx) => (
             <div key={`track1-${idx}`} className="flex items-center mx-6 sm:mx-10 group cursor-default">
@@ -47,7 +47,7 @@ export default function Marquee({ text = null, reverse = false }) {
           aria-hidden="true"
           className={`flex items-center shrink-0 ${
             reverse ? 'animate-marquee-reverse' : 'animate-marquee'
-          } hover:[animation-play-state:paused]`}
+          } group-hover/ticker:[animation-play-state:paused]`}
         >
           {items.map((item, idx) => (
             <div key={`track2-${idx}`} className="flex items-center mx-6 sm:mx-10 group cursor-default">

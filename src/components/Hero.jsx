@@ -184,7 +184,7 @@ export default function Hero({ onOpenContact }) {
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&auto=format&fit=crop&q=80"
-              alt="CodeHive Works Showcase"
+              alt="HiveMind Works Showcase"
               className="w-full h-full object-cover opacity-50 dark:opacity-30 group-hover:scale-110 group-hover:opacity-50 transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/50 to-transparent dark:from-[#050814] dark:via-[#050814]/70 dark:to-transparent" />
@@ -204,10 +204,10 @@ export default function Hero({ onOpenContact }) {
           <div className="relative z-10 pt-16 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <div className="max-w-md">
               <p className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-[#050814] dark:text-white leading-tight mb-2">
-                Blending radical creativity with robust engineering
+                Turning bold ideas into powerful digital experiences
               </p>
               <p className="text-sm text-[#475569] dark:text-[#94a3b8]">
-                Custom web platforms built with React 19, intelligent agentic workflows, and fluid micro-interactions.
+                We combine technology, design, and strategic development to help businesses build, grow, and thrive in a digital-first world.
               </p>
             </div>
 
@@ -269,7 +269,7 @@ export default function Hero({ onOpenContact }) {
               </span>
             </div>
             <p className="font-display text-lg sm:text-xl text-neutral-800 dark:text-[#f8fafc] leading-relaxed">
-              We are an elite creative digital agency specializing in avant-garde design, bespoke modern software development, and transformative AI systems.
+              Ideas into systems. Vision into reality. From concept to execution, we transform challenges into opportunities and build solutions that endure.
             </p>
           </div>
         </RevealOnScroll>

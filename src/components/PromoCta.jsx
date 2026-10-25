@@ -14,25 +14,29 @@ export default function PromoCta({ onOpenContact }) {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-8">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/5 dark:bg-[#f5a623]/10 border border-black/10 dark:border-[#f5a623]/30 text-xs font-mono tracking-wider font-semibold text-neutral-900 dark:text-[#f5a623] mb-6">
-                <Sparkles className="w-3.5 h-3.5 text-[#d48806] dark:text-[#f5a623] animate-spin-slow" /> [ SYS // NEXT_PHASE_ACTIVE ]
+                <Sparkles className="w-3.5 h-3.5 text-[#d48806] dark:text-[#f5a623] animate-spin-slow" /> [ HiveMind // IDEAS INTO SYSTEMS. VISION INTO REALITY. ]
               </div>
               <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold text-neutral-900 dark:text-white tracking-tight leading-[1.05]">
-                Let's talk about <br className="hidden sm:inline" />
-                <span className="text-[#d48806] dark:text-[#f5a623] italic">your project!</span>
+                Let's Build Something <br className="hidden sm:inline" />
+                <span className="text-[#d48806] dark:text-[#f5a623] italic">Meaningful.</span>
               </h2>
-              <p className="mt-6 text-base sm:text-xl text-neutral-600 dark:text-[#94a3b8] max-w-xl leading-relaxed font-sans">
-                Whether you need to architect a flagship digital product, re-engineer your core web application, or integrate bespoke AI agents — our hive is ready to deploy.
+              <p className="mt-6 text-base sm:text-xl text-neutral-600 dark:text-[#94a3b8] max-w-2xl leading-relaxed font-sans">
+                Whether you want to launch a website, develop a digital product, grow your social media presence, or explore website monetization, HiveMind is ready to help you take the next step.
+              </p>
+              <p className="mt-3 text-sm sm:text-base font-medium text-neutral-900 dark:text-white">
+                Have a project in mind? Let's talk about how we can bring it to life.
               </p>
             </div>
 
             <div className="lg:col-span-4 flex lg:justify-end">
               <button
+                type="button"
                 onClick={onOpenContact}
-                className="btn-anim group inline-flex items-center gap-3.5 px-10 py-5 rounded-full bg-neutral-900 text-white dark:bg-[#f5a623] dark:text-[#050814] hover:bg-[#f5a623] hover:text-[#050814] dark:hover:bg-[#ffbe3b] font-bold text-base sm:text-lg shadow-2xl shadow-black/20 dark:shadow-[#f5a623]/25 transition-all duration-300 transform hover:scale-105"
+                className="btn-anim group inline-flex items-center gap-3.5 px-10 py-5 rounded-full bg-neutral-900 text-white dark:bg-[#f5a623] dark:text-[#050814] hover:bg-[#f5a623] hover:text-[#050814] dark:hover:bg-[#ffbe3b] font-bold text-base sm:text-lg shadow-2xl shadow-black/20 dark:shadow-[#f5a623]/25 transition-all duration-300 transform hover:scale-105 cursor-pointer"
               >
                 <span className="btn-caption">
-                  <span className="btn-anim__block">Start Collaboration</span>
-                  <span className="btn-anim__block">Start Collaboration</span>
+                  <span className="btn-anim__block">Start Conversation</span>
+                  <span className="btn-anim__block">Start Conversation</span>
                 </span>
                 <ArrowUpRight className="w-6 h-6 stroke-[2.5] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:rotate-45" />
               </button>

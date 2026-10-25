@@ -19,11 +19,11 @@ export default function Footer({ onOpenContact }) {
 
   return (
     <footer id="contact" className="pt-20 pb-12 px-6 sm:px-10 lg:px-16 max-w-[1720px] mx-auto border-t border-black/5 dark:border-[#f5a623]/15 relative">
-      {/* Monumental Typographic Wordmark: CODEHIVE */}
+      {/* Monumental Typographic Wordmark: HiveMind */}
       <RevealOnScroll animation="fade-up">
         <div className="w-full overflow-hidden select-none mb-16 sm:mb-24">
-          <div className="font-display font-extrabold text-[14vw] leading-none tracking-tighter text-neutral-900/[0.04] dark:text-[#f5a623]/[0.05] hover:text-neutral-900/[0.08] dark:hover:text-[#f5a623]/[0.10] transition-colors duration-500 text-center uppercase whitespace-nowrap">
-            CODEHIVE
+          <div className="font-display font-extrabold text-[10vw] leading-none tracking-tighter text-neutral-900/[0.04] dark:text-[#f5a623]/[0.05] hover:text-neutral-900/[0.08] dark:hover:text-[#f5a623]/[0.10] transition-colors duration-500 text-center uppercase whitespace-nowrap">
+            HiveMind
           </div>
         </div>
       </RevealOnScroll>
@@ -38,16 +38,19 @@ export default function Footer({ onOpenContact }) {
                 <div className="w-9 h-9 rounded-xl overflow-hidden bg-[#050814] border border-black/10 dark:border-[#f5a623]/40 flex items-center justify-center shadow-sm">
                   <img
                     src="/code-hive.jpeg"
-                    alt="CodeHive Official Logo"
+                    alt="HiveMind Official Logo"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <span className="font-display text-lg font-bold tracking-tight text-neutral-900 dark:text-white">
-                  codehive<span className="text-[#d48806] dark:text-[#f5a623]">.</span>
+                  HiveMind<span className="text-[#d48806] dark:text-[#f5a623]">.</span>
                 </span>
               </div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#d48806] dark:text-[#f5a623] mb-4 block font-semibold">
-                [ DIRECTORY // 01 ]
+              <p className="text-xs font-mono text-[#d48806] dark:text-[#f5a623] mb-4 font-semibold uppercase tracking-wider">
+                Ideas into systems. Vision into reality.
+              </p>
+              <span className="text-xs font-mono uppercase tracking-widest text-neutral-500 dark:text-[#94a3b8] mb-4 block font-semibold">
+                [ //DIRECTORY//]
               </span>
               <ul className="space-y-4">
                 {[
@@ -83,26 +86,38 @@ export default function Footer({ onOpenContact }) {
         <RevealOnScroll animation="fade-up" delay={200} className="lg:col-span-4 h-full">
           <div className="space-y-6 flex flex-col justify-between h-full">
             <div className="p-8 rounded-[2rem] bg-white dark:bg-[#0d172e] border border-black/10 dark:border-[#f5a623]/20 shadow-xl shadow-black/5 dark:shadow-2xl">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#d48806] dark:text-[#f5a623] mb-2 block font-semibold">
-                [ COMMS // DIRECT_INQUIRIES ]
-              </span>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-mono uppercase tracking-widest text-[#d48806] dark:text-[#f5a623] font-semibold">
+                  [ COMMS // DIRECT_INQUIRIES ]
+                </span>
+                {onOpenContact && (
+                  <button
+                    type="button"
+                    onClick={onOpenContact}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider font-semibold bg-[#f5a623]/10 hover:bg-[#f5a623] text-[#d48806] dark:text-[#f5a623] hover:text-[#050814] dark:hover:text-[#050814] border border-[#f5a623]/30 transition-all cursor-pointer"
+                  >
+                    <span>Open Form</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </button>
+                )}
+              </div>
               <a
-                href="mailto:hello@codehive.studio"
-                className="font-display text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-white hover:text-[#d48806] dark:hover:text-[#f5a623] transition-colors block"
+                href="mailto:support.HiveMind@gmail.com"
+                className="font-display text-lg sm:text-xl font-semibold text-neutral-900 dark:text-white hover:text-[#d48806] dark:hover:text-[#f5a623] transition-colors block break-all"
               >
-                hello@codehive.studio
+                support.HiveMind@gmail.com
               </a>
             </div>
 
             <div className="p-8 rounded-[2rem] bg-white dark:bg-[#0d172e] border border-black/10 dark:border-[#f5a623]/20 shadow-xl shadow-black/5 dark:shadow-2xl">
               <span className="text-xs font-mono uppercase tracking-widest text-[#d48806] dark:text-[#f5a623] mb-2 block font-semibold">
-                [ COMMS // OFFICE_STATION ]
+                [ COMMS // PHONE_LINE ]
               </span>
               <a
-                href="tel:+15558394483"
+                href="tel:09130435885"
                 className="font-display text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-white hover:text-[#d48806] dark:hover:text-[#f5a623] transition-colors block"
               >
-                +1 (555) 839-4483
+                09130435885
               </a>
             </div>
 
@@ -110,10 +125,10 @@ export default function Footer({ onOpenContact }) {
             <div className="p-8 rounded-[2rem] bg-white dark:bg-[#0d172e] border border-black/10 dark:border-[#f5a623]/20 shadow-xl shadow-black/5 dark:shadow-2xl flex-grow flex flex-col justify-between">
               <div>
                 <p className="font-display text-lg font-semibold text-neutral-900 dark:text-white mb-2">
-                  Subscribe to telemetry:
+                  Stay informed with HiveMind:
                 </p>
                 <p className="text-xs text-neutral-600 dark:text-[#94a3b8] mb-4 font-sans">
-                  Curated thoughts on modern software architecture and AI engineering once a month.
+                  Ideas into systems. Vision into reality. Practical insights on web development and monetization once a month.
                 </p>
               </div>
 
@@ -176,7 +191,7 @@ export default function Footer({ onOpenContact }) {
             </div>
 
             <div className="pt-10 mt-10 border-t border-black/5 dark:border-white/5 flex items-center justify-between text-xs font-mono text-neutral-500 dark:text-[#94a3b8]">
-              <span>CODEHIVE_STUDIO © 2026</span>
+              <span>HiveMind_STUDIO © 2026</span>
               <span className="text-neutral-900 dark:text-[#f5a623] font-medium flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#f5a623] animate-ping" />
                 SYSTEMS_OPTIMAL

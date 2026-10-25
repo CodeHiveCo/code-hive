@@ -194,3 +194,9 @@ html.light ::-webkit-scrollbar-thumb {
 ::-webkit-scrollbar-thumb:hover {
   background: #f5a623;
 }
+
+/* Bulletproof marquee hover pause across all duplicate tracks in unison */
+.marquee-track-container:hover .animate-marquee,
+.marquee-track-container:hover .animate-marquee-reverse {
+  animation-play-state: paused !important;
+}

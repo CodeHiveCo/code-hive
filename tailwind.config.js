@@ -46,8 +46,19 @@ export default {
         'glow-pulse': 'glowPulse 5s ease-in-out infinite',
         'aurora-1': 'auroraFloat1 20s ease-in-out infinite alternate',
         'aurora-2': 'auroraFloat2 25s ease-in-out infinite alternate',
+        'fadeIn': 'fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'fade-in': 'fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'slide-up-fade': 'slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       },
       keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'scale(0.97)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        slideUpFade: {
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
         'spin-reverse': {
           '0%': { transform: 'rotate(360deg)' },
           '100%': { transform: 'rotate(0deg)' },

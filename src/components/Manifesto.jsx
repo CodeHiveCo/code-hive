@@ -79,10 +79,15 @@ export default function Manifesto({ onOpenContact }) {
         </RevealOnScroll>
 
         <RevealOnScroll animation="fade-up" delay={150}>
-          <p className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.25] text-[#050814] dark:text-white tracking-tight mb-12 transition-colors">
-            We are a creative web & software agency specializing in{' '}
+          <div className="mb-4">
+            <span className="font-mono text-xs sm:text-sm uppercase tracking-widest text-[#f5a623] font-semibold">
+              Ideas into systems. Vision into reality.
+            </span>
+          </div>
+          <p className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.25] text-[#050814] dark:text-white tracking-tight mb-8 transition-colors">
+            At HiveMind, we turn{' '}
             <span className="relative inline-block text-[#f5a623] font-medium group">
-              innovative design
+              bold ideas
               <svg
                 viewBox="0 0 240 18"
                 className="absolute left-0 -bottom-2 w-full h-3 text-[#f5a623] overflow-visible pointer-events-none opacity-90"
@@ -97,9 +102,9 @@ export default function Manifesto({ onOpenContact }) {
                 />
               </svg>
             </span>{' '}
-            and{' '}
+            into{' '}
             <span className="relative inline-block text-[#ffbe3b] font-medium group">
-              cutting-edge development
+              powerful digital experiences
               <svg
                 viewBox="0 0 320 18"
                 className="absolute left-0 -bottom-2 w-full h-3 text-[#f5a623]/80 overflow-visible pointer-events-none opacity-80"
@@ -114,8 +119,14 @@ export default function Manifesto({ onOpenContact }) {
                 />
               </svg>
             </span>
-            . We help businesses stand out and every aspect of our projects is crafted with the highest standards of quality.
+            .
           </p>
+          <p className="max-w-3xl mx-auto text-base sm:text-xl text-neutral-600 dark:text-[#94a3b8] leading-relaxed mb-12 font-sans">
+            Through innovative technology, thoughtful design, and strategic development, we help businesses build, grow, and thrive in a digital-first world. From concept to execution, we transform challenges into opportunities and visions into reality.
+          </p>
+          <div className="inline-block p-4 sm:p-5 rounded-2xl bg-[#f5a623]/10 border border-[#f5a623]/30 text-neutral-900 dark:text-white font-medium text-sm sm:text-base mb-10">
+            Have an idea worth building? <span className="text-[#f5a623] font-bold">Let’s bring it to life.</span> Start your project with HiveMind today.
+          </div>
         </RevealOnScroll>
 
         <RevealOnScroll animation="fade-up" delay={300} className="flex flex-wrap items-center justify-center gap-5">
@@ -135,8 +146,8 @@ export default function Manifesto({ onOpenContact }) {
             className="btn-anim group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#f5a623] hover:bg-[#ffbe3b] text-[#050814] transition-all duration-300 font-mono text-xs font-bold uppercase tracking-wider shadow-xl shadow-[#f5a623]/25 hover:shadow-2xl hover:scale-105 border border-[#f5a623]"
           >
             <span className="btn-caption">
-              <span className="btn-anim__block">Start Collaboration</span>
-              <span className="btn-anim__block">Start Collaboration</span>
+              <span className="btn-anim__block">Start Your Project</span>
+              <span className="btn-anim__block">Start Your Project</span>
             </span>
             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
