@@ -27,7 +27,7 @@ const services = [
       'Fluid responsiveness across all screen sizes',
       'SEO-ready architecture & fast load speeds',
     ],
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573166613605-3b4dfcbf1268?w=1200&auto=format&fit=crop&q=80',
     icon: Code2,
   },
   {
@@ -43,7 +43,7 @@ const services = [
       'Interactive wireframes & rapid prototyping',
       'Consistent design systems & guidelines',
     ],
-    image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573496358007-6fe62e3d9010?w=1200&auto=format&fit=crop&q=80',
     icon: Palette,
   },
   {
@@ -59,7 +59,7 @@ const services = [
       'Validation against real-world customer needs',
       'Sustainable foundation for long-term growth',
     ],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&auto=format&fit=crop&q=80',
     icon: Sparkles,
   },
   {
@@ -75,7 +75,7 @@ const services = [
       'Speed, Core Web Vitals & asset optimization',
       'Conversion-focused layout enhancements',
     ],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1521790609145-bacea5940bde?w=1200&auto=format&fit=crop&q=80',
     icon: Rocket,
   },
   {
@@ -91,7 +91,7 @@ const services = [
       'High-impact, non-intrusive ad unit placement',
       'Traffic quality, RPM & revenue performance analysis',
     ],
-    image: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573496773905-f5b17e717f05?w=1200&auto=format&fit=crop&q=80',
     icon: TrendingUp,
   },
   {
@@ -107,7 +107,7 @@ const services = [
       'Community management & authentic audience engagement',
       'Insightful performance & growth reporting',
     ],
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573164574230-db1d5e960238?w=1200&auto=format&fit=crop&q=80',
     icon: Share2,
   },
   {
@@ -123,7 +123,7 @@ const services = [
       'Seamless API & third-party integrations',
       'Practical solutions engineered around your workflows',
     ],
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573164713712-03790a178651?w=1200&auto=format&fit=crop&q=80',
     icon: Cpu,
   },
   {
@@ -139,7 +139,7 @@ const services = [
       'Alignment of business goals with modern technology',
       'Actionable roadmaps for long-term digital growth',
     ],
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?w=1200&auto=format&fit=crop&q=80',
     icon: Compass,
   },
 ];

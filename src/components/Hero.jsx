@@ -183,7 +183,7 @@ export default function Hero({ onOpenContact }) {
           {/* Card Ambient Background Image / Mesh */}
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&auto=format&fit=crop&q=80"
+              src="https://images.unsplash.com/photo-1573164713712-03790a178651?w=1600&auto=format&fit=crop&q=80"
               alt="HiveMind Works Showcase"
               className="w-full h-full object-cover opacity-50 dark:opacity-30 group-hover:scale-110 group-hover:opacity-50 transition-all duration-700 ease-out"
             />

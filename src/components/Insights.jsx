@@ -11,7 +11,7 @@ const articles = [
     readTime: "7–9 min read",
     date: "STRATEGY // 01",
     tags: ['Web Dev', 'SEO', 'Conversion', 'Branding'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1521790609145-bacea5940bde?w=1200&auto=format&fit=crop&q=80',
     excerpt:
       'In today\'s digital world, your website is often the first interaction visitors experience with your services. Is your website actually working for your business, or simply taking up space on the internet?',
     sections: [
@@ -65,7 +65,7 @@ const articles = [
     readTime: '8–10 min read',
     date: 'MARKETING // 02',
     tags: ['Social Media', 'Content Strategy', 'Audience Growth', 'Analytics'],
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573164574230-db1d5e960238?w=1200&auto=format&fit=crop&q=80',
     excerpt:
       'Getting likes feels good, but are those likes translating into customers, inquiries, or sales? Discover how to build a social media strategy that drives real business value.',
     sections: [
@@ -119,7 +119,7 @@ const articles = [
     readTime: '10–12 min read',
     date: 'MONETIZATION // 03',
     tags: ['AdSense', 'Monetization', 'RPM / CPC', 'Traffic Optimization'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573496773905-f5b17e717f05?w=1200&auto=format&fit=crop&q=80',
     excerpt:
       'Learn how Google AdSense works, what influences website earnings, how to prepare for approval, and practical ways to turn your website into a revenue-generating digital asset.',
     sections: [

@@ -3,22 +3,22 @@ import { ArrowUpRight, Sparkles } from 'lucide-react';
 
 const teamPhotos = [
   {
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&auto=format&fit=crop&q=80',
     caption: 'Collaborative Sprint Room',
     code: 'UNIT // 01',
   },
   {
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573497701240-345a300b8d36?w=900&auto=format&fit=crop&q=80',
     caption: 'Product Design Workshop',
     code: 'UNIT // 02',
   },
   {
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1541176447985-6bb45fb77a14?w=900&auto=format&fit=crop&q=80',
     caption: 'Architecture Review',
     code: 'UNIT // 03',
   },
   {
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=80',
     caption: 'Rapid AI Prototyping',
     code: 'UNIT // 04',
   },

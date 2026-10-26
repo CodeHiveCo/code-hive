@@ -9,7 +9,7 @@ const projects = [
     subtitle: 'High-conversion web architecture with optimized ad yield and sub-second load times',
     tags: ['Web Development', 'Monetization', 'SEO'],
     category: 'Web Development',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573166613605-3b4dfcbf1268?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     subtitle: 'Modern corporate website redesign & custom financial dashboard system',
     tags: ['Redesign', 'Corporate', 'Optimization'],
     category: 'Custom Solutions',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1541176447985-6bb45fb77a14?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     subtitle: 'Intuitive spatial design system, wireframing, and interactive prototype suite',
     tags: ['UI/UX Design', 'Design Systems', 'Prototypes'],
     category: 'UI/UX Design',
-    image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573496358007-6fe62e3d9010?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     subtitle: 'High-RPM publishing platform engineered for organic discoverability and compliance',
     tags: ['Google AdSense', 'Monetization', 'Publishing'],
     category: 'Digital Products',
-    image: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573496773905-f5b17e717f05?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
   {
@@ -45,7 +45,7 @@ const projects = [
     subtitle: 'Multi-channel social presence, creative direction, and audience engagement pipeline',
     tags: ['Social Media', 'Content Strategy', 'Growth'],
     category: 'Digital Products',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573164574230-db1d5e960238?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
   {
@@ -54,7 +54,7 @@ const projects = [
     subtitle: 'Custom internal tools, workflow simplification, and practical cloud integrations',
     tags: ['Custom Solutions', 'Automation', 'Efficiency'],
     category: 'Custom Solutions',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
   },
 ];
