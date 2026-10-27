@@ -5,12 +5,13 @@ import RevealOnScroll from './RevealOnScroll';
 const projects = [
   {
     id: 1,
-    title: 'Pulse Commerce & Monetization',
-    subtitle: 'High-conversion web architecture with optimized ad yield and sub-second load times',
-    tags: ['Web Development', 'Monetization', 'SEO'],
+    title: 'Forex Terminators',
+    subtitle: 'Forex trading education, market signals, and mentorship community',
+    tags: ['Web Development', 'SEO'],
     category: 'Web Development',
-    image: 'https://images.unsplash.com/photo-1573166613605-3b4dfcbf1268?w=1200&auto=format&fit=crop&q=80',
+    image: '/image.png',
     span: 'col-span-1 xl:col-span-6',
+    url: 'https://forexterminators.com/'
   },
   {
     id: 2,
@@ -20,43 +21,7 @@ const projects = [
     category: 'Custom Solutions',
     image: 'https://images.unsplash.com/photo-1541176447985-6bb45fb77a14?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
-  },
-  {
-    id: 3,
-    title: 'Nexus Spatial UI System',
-    subtitle: 'Intuitive spatial design system, wireframing, and interactive prototype suite',
-    tags: ['UI/UX Design', 'Design Systems', 'Prototypes'],
-    category: 'UI/UX Design',
-    image: 'https://images.unsplash.com/photo-1573496358007-6fe62e3d9010?w=1200&auto=format&fit=crop&q=80',
-    span: 'col-span-1 xl:col-span-6',
-  },
-  {
-    id: 4,
-    title: 'AdSense Multi-Niche Media Hub',
-    subtitle: 'High-RPM publishing platform engineered for organic discoverability and compliance',
-    tags: ['Google AdSense', 'Monetization', 'Publishing'],
-    category: 'Digital Products',
-    image: 'https://images.unsplash.com/photo-1573496773905-f5b17e717f05?w=1200&auto=format&fit=crop&q=80',
-    span: 'col-span-1 xl:col-span-6',
-  },
-  {
-    id: 5,
-    title: 'Aura Social Brand Engine',
-    subtitle: 'Multi-channel social presence, creative direction, and audience engagement pipeline',
-    tags: ['Social Media', 'Content Strategy', 'Growth'],
-    category: 'Digital Products',
-    image: 'https://images.unsplash.com/photo-1573164574230-db1d5e960238?w=1200&auto=format&fit=crop&q=80',
-    span: 'col-span-1 xl:col-span-6',
-  },
-  {
-    id: 6,
-    title: 'Enterprise Process Automation',
-    subtitle: 'Custom internal tools, workflow simplification, and practical cloud integrations',
-    tags: ['Custom Solutions', 'Automation', 'Efficiency'],
-    category: 'Custom Solutions',
-    image: 'https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?w=1200&auto=format&fit=crop&q=80',
-    span: 'col-span-1 xl:col-span-6',
-  },
+  }
 ];
 
 export default function CaseStudies({ onOpenContact }) {
@@ -136,9 +101,11 @@ export default function CaseStudies({ onOpenContact }) {
                 </div>
 
                 {/* Hover Overlay Arrow Button */}
-                <div className="absolute bottom-6 right-6 z-10 w-14 h-14 rounded-full bg-[#f5a623] text-[#050814] flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-all duration-400 transform translate-y-3 group-hover/card:translate-y-0 shadow-2xl shadow-[#f5a623]/40 group-hover/card:rotate-45">
-                  <ArrowUpRight className="w-6 h-6 stroke-[2.5]" />
-                </div>
+                <a href={proj.url} target="_blank" rel="noopener noreferrer">
+                  <div className="absolute bottom-6 right-6 z-10 w-14 h-14 rounded-full bg-[#f5a623] text-[#050814] flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-all duration-400 transform translate-y-3 group-hover/card:translate-y-0 shadow-2xl shadow-[#f5a623]/40 group-hover/card:rotate-45">
+                    <ArrowUpRight className="w-6 h-6 stroke-[2.5]" />
+                  </div>
+                </a>
               </div>
 
               {/* Project Metadata & Title */}

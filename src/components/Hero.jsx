@@ -133,33 +133,6 @@ export default function Hero({ onOpenContact }) {
           </h1>
         </div>
 
-        {/* Floating Social Proof Stack with smooth float */}
-        <div className="lg:col-span-4 xl:col-span-3 flex lg:justify-end">
-          <div className="animate-float p-4 sm:p-5 rounded-3xl bg-white/95 dark:bg-[#0d172e]/95 border border-black/10 dark:border-[#f5a623]/25 flex items-center gap-4 shadow-xl shadow-black/5 dark:shadow-black/50 backdrop-blur-md">
-            {/* Avatar Stack */}
-            <div className="flex -space-x-3 items-center">
-              <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80"
-                alt="Client avatar"
-                className="w-11 h-11 rounded-full border-2 border-white dark:border-[#050814] object-cover shadow-sm hover:scale-110 transition-transform"
-              />
-              <div className="w-11 h-11 rounded-full bg-[#081021] border-2 border-white dark:border-[#050814] flex items-center justify-center text-[#f5a623] shadow-inner animate-pulse">
-                <Star className="w-5 h-5 fill-[#f5a623]" />
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80"
-                alt="Client avatar"
-                className="w-11 h-11 rounded-full border-2 border-white dark:border-[#050814] object-cover shadow-sm hover:scale-110 transition-transform"
-              />
-            </div>
-            <div className="text-left leading-snug font-mono">
-              <p className="text-[10px] uppercase tracking-wider text-[#64748b] dark:text-[#94a3b8] font-semibold">VALIDATED BY</p>
-              <a href="#about" className="text-xs font-bold text-[#050814] dark:text-white hover:text-[#f5a623] dark:hover:text-[#f5a623] transition-colors flex items-center gap-1">
-                120+ Founders <ArrowUpRight className="w-3 h-3 text-[#f5a623]" />
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Dual Split Hero Showcase (Rayo signature layout) with Reveal Animations */}
