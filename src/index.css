@@ -91,41 +91,43 @@ html.light .bg-cyber-grid {
   z-index: 20;
 }
 
-/* Rayo Signature Sliding Button Animation */
-.btn-anim {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
-}
+@layer components {
+  /* Rayo Signature Sliding Button Animation */
+  .btn-anim {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+  }
 
-.btn-caption {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-}
+  .btn-caption {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
 
-.btn-anim__block {
-  display: block;
-  transition: transform 0.4s cubic-bezier(0.23, 0.65, 0.74, 1.09);
-}
+  .btn-anim__block {
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+  }
 
-.btn-anim__block:last-child {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-}
+  .btn-anim__block:last-child {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
 
-.btn-anim:hover .btn-anim__block:first-child {
-  transform: translateY(-100%);
-}
+  .btn-anim:hover .btn-anim__block:first-child {
+    transform: translateY(-100%);
+  }
 
-.btn-anim:hover .btn-anim__block:last-child {
-  transform: translateY(-100%);
+  .btn-anim:hover .btn-anim__block:last-child {
+    transform: translateY(-100%);
+  }
 }
 
 /* Floating Micro-Animation */
