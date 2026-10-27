@@ -162,8 +162,8 @@ export default function ServicesPinned({ onOpenContact }) {
         });
       },
       {
-        rootMargin: '-20% 0px -40% 0px',
-        threshold: 0.25,
+        rootMargin: '-10% 0px -30% 0px',
+        threshold: 0.1,
       }
     );
 
@@ -203,12 +203,11 @@ export default function ServicesPinned({ onOpenContact }) {
       </RevealOnScroll>
 
       {/* Main Interactive Split Layout (Pinned on Desktop) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 items-start">
-        {/* Sticky Visual Showcase on Left */}
-        <div className="lg:col-span-5 xl:col-span-5">
-          <div className="lg:sticky lg:top-28 z-20">
-            <div className="relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#0d172e] border border-black/10 dark:border-[#f5a623]/25 p-4 sm:p-6 shadow-2xl shadow-black/5 dark:shadow-black/60 transition-colors duration-300">
-              {/* Stepper Tabs Bar for 8 services */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 relative">
+        {/* Sticky Visual Showcase on Left (Stretches track of grid, pinned at top-24) */}
+        <div className="lg:col-span-5 xl:col-span-5 lg:sticky lg:top-24 xl:top-28 self-start z-20">
+          <div className="relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#0d172e] border border-black/10 dark:border-[#f5a623]/25 p-5 sm:p-6 shadow-2xl shadow-black/5 dark:shadow-black/60 transition-colors duration-300">
+            {/* Stepper Tabs Bar for 8 services */}
               <div className="grid grid-cols-8 gap-1.5 mb-4">
                 {services.map((srv) => (
                   <button
@@ -225,8 +224,8 @@ export default function ServicesPinned({ onOpenContact }) {
                 ))}
               </div>
 
-              {/* Visual Preview Image with Butter-Smooth Crossfade */}
-              <div className="relative h-72 sm:h-96 w-full rounded-2xl overflow-hidden mb-6 bg-[#050814]">
+              {/* Visual Preview Image with Butter-Smooth Crossfade - optimized height so entire card fits comfortably on all screens */}
+              <div className="relative h-60 sm:h-64 lg:h-64 xl:h-72 w-full rounded-2xl overflow-hidden mb-5 bg-[#050814]">
                 {services.map((srv) => (
                   <img
                     key={srv.id}
@@ -256,9 +255,9 @@ export default function ServicesPinned({ onOpenContact }) {
               </div>
 
               {/* Feature Checkpoints */}
-              <div className="space-y-3 px-2">
-                <div className="flex items-center justify-between mb-3">
-                  <p className="text-xs font-mono uppercase tracking-widest text-[#64748b] dark:text-[#94a3b8] font-semibold">
+              <div className="space-y-2.5 px-1 sm:px-2">
+                <div className="flex items-center justify-between mb-2">
+                  <p className="text-[11px] font-mono uppercase tracking-widest text-[#64748b] dark:text-[#94a3b8] font-semibold">
                     CORE DELIVERABLES
                   </p>
                   <span className="text-[10px] font-mono text-[#f5a623] tracking-widest">
@@ -268,7 +267,7 @@ export default function ServicesPinned({ onOpenContact }) {
                 {activeService.features.map((feat, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-3 text-sm text-[#050814] dark:text-[#f8fafc] font-medium transition-colors duration-200"
+                    className="flex items-center gap-2.5 text-xs sm:text-sm text-[#050814] dark:text-[#f8fafc] font-medium transition-colors duration-200"
                   >
                     <CheckCircle2 className="w-4 h-4 text-[#f5a623] flex-shrink-0" />
                     <span>{feat}</span>
@@ -277,7 +276,7 @@ export default function ServicesPinned({ onOpenContact }) {
               </div>
 
               {/* Bottom Inquire Action */}
-              <div className="mt-8 pt-6 border-t border-black/10 dark:border-[#f5a623]/15 flex items-center justify-between">
+              <div className="mt-6 pt-5 border-t border-black/10 dark:border-[#f5a623]/15 flex items-center justify-between">
                 <span className="text-xs font-mono text-[#64748b] dark:text-[#94a3b8]">START WITH HiveMind</span>
                 <button
                   type="button"
@@ -293,7 +292,6 @@ export default function ServicesPinned({ onOpenContact }) {
               </div>
             </div>
           </div>
-        </div>
 
         {/* Services List on Right (All 8 Official Services) */}
         <div className="lg:col-span-7 xl:col-span-7 space-y-6">

@@ -172,7 +172,7 @@ export default function Footer({ onOpenContact }) {
                   { name: 'Dribbble', href: 'https://dribbble.com' },
                   { name: 'Behance', href: 'https://behance.net' },
                   { name: 'X / Twitter', href: 'https://twitter.com' },
-                  { name: 'LinkedIn', href: 'https://linkedin.com' },
+                  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jesse-chukwuzubelu-9b2715207?utm_source=share_via&utm_content=profile&utm_medium=member_ios' },
                   { name: 'Figma Community', href: 'https://figma.com' },
                 ].map((item) => (
                   <li key={item.name}>

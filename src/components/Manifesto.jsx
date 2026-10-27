@@ -8,17 +8,31 @@ function CounterItem({ endValue, prefix = '', suffix = '', duration = 1600 }) {
   const ref = useRef(null);
 
   useEffect(() => {
+    // If mobile or coarse pointer, trigger counter immediately
+    if (typeof window !== 'undefined' && (window.innerWidth < 768 || window.matchMedia('(pointer: coarse)').matches)) {
+      setHasStarted(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasStarted) {
           setHasStarted(true);
         }
       },
-      { threshold: 0.1, rootMargin: '0px 0px -20px 0px' }
+      { threshold: 0, rootMargin: '100px 0px 100px 0px' }
     );
 
     if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+
+    const safetyTimer = setTimeout(() => {
+      setHasStarted(true);
+    }, 1200);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(safetyTimer);
+    };
   }, [hasStarted]);
 
   useEffect(() => {

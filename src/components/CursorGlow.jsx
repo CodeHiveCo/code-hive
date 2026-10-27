@@ -6,7 +6,12 @@ export default function CursorGlow() {
   const [isHovering, setIsHovering] = useState(false);
   const [cursorText, setCursorText] = useState('');
   const [isVisible, setIsVisible] = useState(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 1024 || window.matchMedia('(pointer: coarse)').matches;
+    }
+    return false;
+  });
 
   const requestRef = useRef(null);
   const targetPos = useRef({ x: -100, y: -100 });
@@ -14,7 +19,7 @@ export default function CursorGlow() {
 
   useEffect(() => {
     // Only enable on desktop pointer devices
-    if (window.matchMedia('(pointer: coarse)').matches) {
+    if (window.innerWidth < 1024 || window.matchMedia('(pointer: coarse)').matches) {
       setIsTouchDevice(true);
       return;
     }

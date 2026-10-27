@@ -4,12 +4,7 @@ import RevealOnScroll from './RevealOnScroll';
 
 export default function Hero({ onOpenContact }) {
   const [isPlaying, setIsPlaying] = useState(true);
-  const [hasMounted, setHasMounted] = useState(false);
   const canvasRef = useRef(null);
-
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
 
   // 60FPS Interactive Waveform Animation Canvas in Right Hero Card
   useEffect(() => {
@@ -20,16 +15,23 @@ export default function Hero({ onOpenContact }) {
     let step = 0;
 
     const resize = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
+      if (canvas && canvas.offsetWidth && canvas.offsetHeight) {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
     };
     resize();
     window.addEventListener('resize', resize);
 
     const render = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
       const width = canvas.width;
       const height = canvas.height;
+      if (width === 0 || height === 0) {
+        animationFrameId = requestAnimationFrame(render);
+        return;
+      }
+
+      ctx.clearRect(0, 0, width, height);
       const centerY = height / 2;
 
       const lines = [
@@ -62,7 +64,7 @@ export default function Hero({ onOpenContact }) {
 
         // Draw traveling glowing energy node along waveform
         if (isPlaying) {
-          const beadX = ((step * 2.5) % (width - 40)) + 20;
+          const beadX = ((step * 2.5) % Math.max(width - 40, 10)) + 20;
           const beadY =
             centerY +
             Math.sin(beadX * line.freq + step * line.speed) *
@@ -107,21 +109,13 @@ export default function Hero({ onOpenContact }) {
           </div>
 
           <h1 className="font-display text-5xl sm:text-7xl md:text-8xl xl:text-9xl font-bold tracking-tight leading-[0.95] text-[#050814] dark:text-white transition-colors duration-400">
-            {/* Staggered load reveal for Headline Row 1 */}
-            <span
-              className={`block transition-all duration-1000 ease-out transform ${
-                hasMounted ? 'translate-y-0 opacity-100' : 'translate-y-14 opacity-0'
-              }`}
-            >
+            {/* Headline Row 1 - Immediately Visible without vanishing flash */}
+            <span className="block">
               Shaping ideas
             </span>
 
-            {/* Staggered load reveal for Headline Row 2 */}
-            <span
-              className={`flex flex-wrap items-center gap-3 sm:gap-6 mt-1 sm:mt-2 transition-all duration-1000 delay-200 ease-out transform ${
-                hasMounted ? 'translate-y-0 opacity-100' : 'translate-y-14 opacity-0'
-              }`}
-            >
+            {/* Headline Row 2 */}
+            <span className="flex flex-wrap items-center gap-3 sm:gap-6 mt-1 sm:mt-2">
               <span className="inline-flex items-center justify-center w-12 h-12 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#0d172e] border border-black/10 dark:border-[#f5a623]/40 text-[#f5a623] shadow-xl hover:rotate-180 hover:scale-115 transition-all duration-700 cursor-pointer group shadow-[#050814]">
                 {/* 4-point Brand Star SVG with gentle pulse & spin on hover */}
                 <svg
@@ -139,13 +133,9 @@ export default function Hero({ onOpenContact }) {
           </h1>
         </div>
 
-        {/* Floating Social Proof Stack with subtle float animation */}
+        {/* Floating Social Proof Stack with smooth float */}
         <div className="lg:col-span-4 xl:col-span-3 flex lg:justify-end">
-          <div
-            className={`animate-float p-4 sm:p-5 rounded-3xl bg-white/95 dark:bg-[#0d172e]/95 border border-black/10 dark:border-[#f5a623]/25 flex items-center gap-4 shadow-xl shadow-black/5 dark:shadow-black/50 backdrop-blur-md transition-all duration-1000 delay-300 transform ${
-              hasMounted ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-            }`}
-          >
+          <div className="animate-float p-4 sm:p-5 rounded-3xl bg-white/95 dark:bg-[#0d172e]/95 border border-black/10 dark:border-[#f5a623]/25 flex items-center gap-4 shadow-xl shadow-black/5 dark:shadow-black/50 backdrop-blur-md">
             {/* Avatar Stack */}
             <div className="flex -space-x-3 items-center">
               <img
