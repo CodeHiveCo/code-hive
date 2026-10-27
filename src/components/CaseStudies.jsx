@@ -21,6 +21,7 @@ const projects = [
     category: 'Custom Solutions',
     image: 'https://images.unsplash.com/photo-1541176447985-6bb45fb77a14?w=1200&auto=format&fit=crop&q=80',
     span: 'col-span-1 xl:col-span-6',
+    url: '#'
   }
 ];
 
